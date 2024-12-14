@@ -1,28 +1,31 @@
 import {
   ChatBubbleBottomCenterTextIcon,
+  PaintBrushIcon,
+  CalendarIcon,
+  UsersIcon
 } from "@heroicons/react/24/solid";
 
 export const featuresData = [
   {
-    color: "gray",
-    title: "Awarded Agency",
-    icon: ChatBubbleBottomCenterTextIcon,
+    color: "red",
+    title: "INTERIOR DESIGN",
+    icon: PaintBrushIcon,
     description:
-      "Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.",
+      "상업 공간 디자인을 공간에 맞추어 맞춤 디자인을 진행해드립니다.",
   },
   {
-    color: "gray",
-    title: "Free Revisions",
-    icon: ChatBubbleBottomCenterTextIcon,
+    color: "blue",
+    title: "INTERIOR PLANNING",
+    icon: CalendarIcon,
     description:
-      "Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.",
+      "상업 공간 업종에 맞추어 공간에 맞는 공간기획을 진행해드립니다.",
   },
   {
-    color: "gray",
-    title: "Verified Company",
-    icon: ChatBubbleBottomCenterTextIcon,
+    color: "green",
+    title: "INTERIOR WORK",
+    icon: UsersIcon,
     description:
-      "Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!",
+      "직영 공사로 직접 진행하여 현장에 책임자가 항시 상주하여 완벽한 시공을 진행해드립니다.",
   },
 ];
 

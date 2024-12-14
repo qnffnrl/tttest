@@ -68,7 +68,7 @@ Let us know your thoughts below. And good luck with development!
 ## Demo
 
 - [About page](https://demos.creative-tim.com/material-tailwind-kit-react/#/home?ref=readme-mtkr)
-- [Profile page](https://demos.creative-tim.com/material-tailwind-kit-react/#/profile?ref=readme-mtkr)
+- [Portfolio page](https://demos.creative-tim.com/material-tailwind-kit-react/#/profile?ref=readme-mtkr)
 - [Sign in page](https://demos.creative-tim.com/material-tailwind-kit-react/#/sign-in?ref=readme-mtkr)
 - [Sign up page](https://demos.creative-tim.com/material-tailwind-kit-react/#/sign-up?ref=readme-mtkr)
 
