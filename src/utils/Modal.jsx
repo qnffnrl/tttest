@@ -1,5 +1,7 @@
 import React from 'react';
 import "@/asset/css/modal.css"
+import { Carousel } from "@material-tailwind/react"
+import photos from "../asset/datas/photos.json"
 
 function Modal(props) {
 
@@ -11,10 +13,25 @@ function Modal(props) {
             {open ? (
                 <section>
                     <header>
-                        <span className="gradient">@{header}</span>
+                        <span className="gradient">{header}</span>
                         <button className="close" onClick={close}>&times;</button>
                     </header>
-                    <main>{props.children}</main>
+
+                    <main class="dd-flex">
+                        <Carousel className="rounded-xl">
+                            {
+                                photos.map((photo, index) => (
+                                    <img
+                                        src={photo.url}
+                                        alt="image 1"
+                                        className="h-full w-full object-cover img-in-modal"
+                                    />
+                                ))
+                            }
+                        </Carousel>
+                    </main>
+
+
                     <footer>
                         <button className="close" onClick={close}>close</button>
                     </footer>

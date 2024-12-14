@@ -33,21 +33,9 @@ export function Portfolio() {
                 <PortfolioCard numbering={1} headerName={"유타워 인테리어"} imgPath={uTowerImgPath} subHeader={"유타워"}
                                linkPath={"http://www.risker.shop/board"}
                                githubPath={"https://github.com/qnffnrl/phpBoard"}/>
+
             </div>
 
-            <div className="relative flex content-center items-center justify-center pb-32">
-                <PortfolioCard numbering={1} headerName={"유타워 인테리어"} imgPath={uTowerImgPath} subHeader={"유타워"}
-                               linkPath={"http://www.risker.shop/board"}
-                               githubPath={"https://github.com/qnffnrl/phpBoard"}/>
-
-                <PortfolioCard numbering={1} headerName={"유타워 인테리어"} imgPath={uTowerImgPath} subHeader={"유타워"}
-                               linkPath={"http://www.risker.shop/board"}
-                               githubPath={"https://github.com/qnffnrl/phpBoard"}/>
-
-                <PortfolioCard numbering={1} headerName={"유타워 인테리어"} imgPath={uTowerImgPath} subHeader={"유타워"}
-                               linkPath={"http://www.risker.shop/board"}
-                               githubPath={"https://github.com/qnffnrl/phpBoard"}/>
-            </div>
         </section>
 
         <div className="bg-white">
