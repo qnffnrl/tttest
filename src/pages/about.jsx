@@ -14,12 +14,32 @@ import {DocumentDuplicateIcon} from "@heroicons/react/24/solid";
 import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard } from "@/widgets/cards";
 import { featuresData } from "@/data";
-import portfolio from "@/pages/portfolio.jsx";
-
-
-
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import serverApi from "@/api/serverApi.js";
 
 export function About() {
+
+  const navigate = useNavigate();
+
+  async function getItems() {
+
+    const resData = await serverApi.get('/dynamodb/items');
+    console.log("resData", resData);
+
+    // axios.get('http://localhost:3000/api/dynamodb/items')
+    //     .then((response) => {
+    //       //
+    //       console.log("res", response.data);
+    //     })
+    //     .catch(function (error) {
+    //       console.log("ERROR:::", error);
+    //     }).finally(function () {
+    //
+    //     });
+  }
+
+
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
@@ -78,7 +98,7 @@ export function About() {
                 <br />
                 다년간의 경험을 가진 베테랑 기술자들이 머리를 맞대 기술을 발휘합니다.
               </Typography>
-              <Button onClick={portfolio} variant="filled" >go to portfolio</Button>
+              <Button onClick={() => {navigate('/portfolio')}} variant="filled" >go to portfolio</Button>
             </div>
             <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
               <Card className="shadow-lg border shadow-gray-500/10 rounded-lg">
@@ -125,30 +145,15 @@ export function About() {
             Complete this form and we will get back to you in 24 hours.
           </PageTitle>
           <form className="mx-auto w-full mt-12 lg:w-5/12">
+
             <div className="mb-8 flex gap-8">
               <Input variant="outlined" size="lg" label="Full Name" />
               <Input variant="outlined" size="lg" label="Email Address" />
             </div>
+
             <Textarea variant="outlined" size="lg" label="Message" rows={8} />
-            <Checkbox
-              label={
-                <Typography
-                  variant="small"
-                  color="gray"
-                  className="flex items-center font-normal"
-                >
-                  I agree the
-                  <a
-                    href="#"
-                    className="font-medium transition-colors hover:text-gray-900"
-                  >
-                    &nbsp;Terms and Conditions
-                  </a>
-                </Typography>
-              }
-              containerProps={{ className: "-ml-2.5" }}
-            />
-            <Button variant="gradient" size="lg" className="mt-8" fullWidth>
+
+            <Button onClick={getItems} variant="gradient" size="lg" className="mt-8" fullWidth>
               Send Message
             </Button>
           </form>
